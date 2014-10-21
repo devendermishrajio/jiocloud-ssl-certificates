@@ -1,0 +1,5 @@
+jiocloud-ssl-certificate (0.1-1) trusty; urgency=low
+
+  * Initial release of fake cert package for testing.
+
+ -- Soren Hansen <Soren.Hansen@ril.com>  Fri, 19 Sep 2014 11:33:30 +0200

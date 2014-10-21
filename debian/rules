@@ -1,0 +1,13 @@
+#!/usr/bin/make -f
+%:
+	dh $@
+
+override_dh_install:
+	dh_install
+	mkdir -p debian/jiocloud-ssl-certificate/etc/apache2/certs/
+	mkdir -p debian/jiocloud-ssl-certificate/etc/apache2/keys/
+	install -m 0644 jiocloud.com.cert.pem debian/jiocloud-ssl-certificate/etc/apache2/certs/jiocloud.com.crt
+	install -m 0600 jiocloud.com.key.pem debian/jiocloud-ssl-certificate/etc/apache2/keys/jiocloud.com.key
+
+override_dh_fixperms:
+	dh_fixperms -X/etc/apache2/keys/jiocloud.com.key
