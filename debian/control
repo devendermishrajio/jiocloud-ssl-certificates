@@ -8,6 +8,8 @@ Homepage: https://github.com/JioCloud/puppet-rjil
 
 Package: jiocloud-ssl-certificate
 Architecture: all
+Depends:
+ openssl
 Description: Fake cert package for JioCloud for testing
  This package contains a set of fake, self-signed certificates for
  JioCloud.
